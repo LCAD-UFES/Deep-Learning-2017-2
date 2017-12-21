@@ -9,7 +9,7 @@ Professor: Alberto Ferreira De Souza
 - [Instalação do OpenPose manualmente](#instalacao-do-openpose-manualmente)
   - [Selecionar o Makefile (execute apenas um dos próximos 4 comandos)](#selecionar-o-makefile-execute-apenas-um-dos-proximos-4-comandos)
   - [Compilar o Caffe](#compilar-o-caffe)
-          - [stalar o OpenPose ###](#stalar-o-openpose)
+          - [Instalar o OpenPose](#Instalar-o-openpose)
   - [O arquivo deve ser a mesma versão do CUDA e sistema operacional](#o-arquivo-deve-ser-a-mesma-versao-do-cuda-e-sistema-operacional)
   - [Modificar qualquer flag personalizado de Makefile.config resultante (e.g. OpenCV 3, Atlas/OpenBLAS/MKL, etc.)](#modificar-qualquer-flag-personalizado-de-makefileconfig-resultante-eg-opencv-3-atlasopenblasmkl-etc)
   - [Instalação e execução do código](#instalacao-e-execucao-do-codigo)
@@ -48,7 +48,7 @@ cp Makefile.config.Ubuntu16_cuda8.example Makefile.config # Ubuntu 16, cuda 8
 ## Compilar o Caffe
 `make all -j${números_de_cpu} && make distribute -j${números_de_cpu}`
 
-### Instalar o OpenPose ###
+### Instalar o OpenPose
 ```
 cd ../../models/
 bash ./getModels.sh # Apenas faz download dos modelos treinados. Os modelos ficam na pasta /models
