@@ -83,4 +83,6 @@ No wrapper do OpenPose é possível utilizar a estrutura `Datum` que possui uma 
 # Resultado
 Aplicando o OpenPose no log do LCAD, foi possível reconhecer 12 de 13 pedestres que caminharam na faixa de pedestres.
 
+O vídeo do resultado e o relatório do experimento podem ser encontrados na pasta doc.
+
 [![Experimento](https://raw.githubusercontent.com/LCAD-UFES/Deep-Learning-2017-2/master/saulo-caliman/doc/output.webm)]
