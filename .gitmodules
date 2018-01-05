@@ -1,0 +1,3 @@
+[submodule "LucasScart-Ranik/darknet"]
+	path = LucasScart-Ranik/darknet
+	url = https://github.com/AlexeyAB/darknet.git
