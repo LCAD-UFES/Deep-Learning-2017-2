@@ -9,14 +9,9 @@
 - [Openpose](#openpose)
 - [Pré Requisitos](#pre-requisitos)
   - [Sistemas operacionais homologados](#sistemas-operacionais-homologados)
-- [Instalação do OpenPose manualmente](#instalacao-do-openpose-manualmente)
-  - [Selecionar o Makefile (execute apenas um dos próximos 4 comandos)](#selecionar-o-makefile-execute-apenas-um-dos-proximos-4-comandos)
-  - [Compilar o Caffe](#compilar-o-caffe)
-          - [Instalar o OpenPose](#Instalar-o-openpose)
-  - [O arquivo deve ser a mesma versão do CUDA e sistema operacional](#o-arquivo-deve-ser-a-mesma-versao-do-cuda-e-sistema-operacional)
-  - [Modificar qualquer flag personalizado de Makefile.config resultante (e.g. OpenCV 3, Atlas/OpenBLAS/MKL, etc.)](#modificar-qualquer-flag-personalizado-de-makefileconfig-resultante-eg-opencv-3-atlasopenblasmkl-etc)
-  - [Instalação e execução do código](#instalacao-e-execucao-do-codigo)
-- [Experimento](#experimento)
+  - [Configuração mínima recomendada de hardware e software](#Configuração-mínima-recomendada-de-hardware-e-software)
+- [Instalação](#instalacao)
+- [Execução do experimento](#execucao-do-experimento)
 - [Resultado](#resultado)
 
 # Openpose
@@ -34,27 +29,23 @@ A documentação detalhada pode ser encontrada no respositório oficial [aqui](h
 - Nvidia Jetson TX2
 - Windows 7, Mac, CentOS, and Nvidia Jetson (TK1 and TX1), funciona mas não é suportada pelos desenvolvedores.
 
-### Configuração mínima recomendada de hardware
+### Configuração mínima recomendada de hardware e software
 
 - Placa gráfica NVIDIA com pelo menos 1.6 GB disponível
 - No mínimo 2GB de memória RAM disponível
-- Altamente recomendada a utilização da biblioteca cuDNN da NVIDIA e CPU com pelo menos 8 núcleos
-
-
-### Obtendo repositório
-```sh
-git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
-```
+- Altamente recomendada a utilização CPU com pelo menos 8 núcleos
+- Biblioteca cuDNN da NVIDIA e OpenCV
 
 # Procedimento de instalação
 O procedimento de instalação descrito tomará como base o sistema operacional Ubuntu 14, versão utilizada durantes os experimentos no LCAD.
 
-### Instalação via script
+# Instalação
 ```sh
-cd openpose #entre no diretorio raiz do repositorio
+git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose #clone o repositorio openpose
+cd openpose #entre no diretorio raiz do repositorio #navegue até o diretorio do repositorio openpose
 bash ./ubuntu/install_caffe_and_openpose_if_cuda8.sh #execute o script de instalacao
 ```
-Alternativamente, pode ser feita a instalação manual, na qual o usuário pode alterar alguns parâmetros conforme necessidade. Maiores detalhes desta abordagem podem ser encontrados no [guia de instalação da Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation.md).
+O procedimento descrito refere-se a instalação via script, alternativamente, pode ser feita a instalação manual, na qual o usuário pode alterar alguns parâmetros de configuração conforme necessidade. Maiores detalhes desta abordagem podem ser encontrados no [guia de instalação da Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation.md).
 
 Para verificar se instalação ocorreu corretamente, execute o comando abaixo para rodar um exemplo disponibilizado pelo time do Openpose:
 
