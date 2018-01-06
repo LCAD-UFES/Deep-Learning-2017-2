@@ -1,13 +1,7 @@
-
-build/examples/user_code/openpose-iara.bin
-
-video-annotation
-
-
-
 # UFES - Deep Learning 2017-2
 
-**Integrantes**: Emilia Cremasco e Daniel Cardoso 
+**Integrantes**: Emilia Cremasco e Daniel Cardoso
+
 **Professor**: Alberto Ferreira De Souza
 
 ## Índice
@@ -88,11 +82,21 @@ cd Deep-Learning-2017-2/emilia-daniel
 cp video-annotation.cpp <PATH_REPOSITORIO_OPENPOSE>
 cp openpose-iara.cpp <PATH_REPOSITORIO_OPENPOSE>
 ```
-4. Execução do programa de anotação de bounding box:
-```sh
-g++ -o video-annotation video-annotation.cpp -W -Wall `pkg-config --cflags opencv` -O4 `pkg-config --libs opencv`
-```
-4. Execução do programa de anotação de bounding box:
-```sh
-g++ -o video-annotation video-annotation.cpp -W -Wall `pkg-config --cflags opencv` -O4 `pkg-config --libs opencv`
-```
+4. Compilação
+  4.1 Anotação de bounding box:
+  ```sh
+  g++ -o video-annotation video-annotation.cpp -W -Wall `pkg-config --cflags opencv` -O4 `pkg-config --libs opencv`
+  ```
+  4.1 Detecção de pessoas:
+  ```sh
+  make
+  ```
+5. Execução  
+  5.1 Anotação de bounding box:
+  ```sh
+  ./video-anotation <VIDEO_PATH> #replace <VIDEO_PATH> for the video path
+  ```
+  5.1 Detecção de pessoas:
+  ```sh
+  build/examples/user_code/1.bin
+  ```
