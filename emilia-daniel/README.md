@@ -8,7 +8,7 @@
 
 - [Openpose](#openpose)
 - [Pré Requisitos](#pre-requisitos)
-  - [Sistemas operacionais homologados](#Sistemas operacionais homologados)
+  - [Sistemas operacionais homologados](#sistemas-operacionais-homologados)
 - [Instalação do OpenPose manualmente](#instalacao-do-openpose-manualmente)
   - [Selecionar o Makefile (execute apenas um dos próximos 4 comandos)](#selecionar-o-makefile-execute-apenas-um-dos-proximos-4-comandos)
   - [Compilar o Caffe](#compilar-o-caffe)
