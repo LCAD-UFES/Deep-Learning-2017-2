@@ -55,7 +55,6 @@ public:
 };
 
 vector<Frame> loadGroundTruth(){
-	cout << "Loading ground truth...\n";
 	ifstream in("groundtruth.txt");
 	if (!in){
 		cout << "Can't open groundtruth.txt\n";
@@ -147,10 +146,17 @@ void drawRect(cv::Mat frame, cv::Rect rect, cv::Scalar color){
 
 }
 
-int main()
+int main(int argc, char* argv[])
 {
 
-    cout<<"Click and drag for Selection"<<endl<<endl;
+	if (argc < 2){
+		cout << "Usage: ./video-annotation <VIDEO_FILE>\n";
+		exit(0);
+	}
+			
+
+    cout<<"Click and drag for create bounding box"<<endl<<endl;
+
     cout<<"------> Press 's' to save"<<endl<<endl;
 
     cout<<"------> Press '8' to move up"<<endl;
@@ -174,7 +180,7 @@ int main()
     vector <Frame> frames = loadGroundTruth();
   
 
-    VideoCapture cap("output.mp4"); // open the default camera
+    VideoCapture cap(argv[1]); // open the default camera
 	if(!cap.isOpened())  // check if we succeeded
 	   return -1;
 	
@@ -194,7 +200,6 @@ int main()
 		   imshow("bbimage",src);
 	   }
 	   
-	   cout << " frames.size(): " << frames.size() << "     FrameNumber: " << frameNumber << endl;
 	   if (frameNumber < frames.size()){
 		   for (int i = 0; i < frames[frameNumber].boundingBoxes.size(); i++){	
 				//draw ground truth boundingbox

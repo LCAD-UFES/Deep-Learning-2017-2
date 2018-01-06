@@ -69,6 +69,9 @@ DEFINE_double(alpha_pose,               0.6,            "Blending factor (range 
 DEFINE_double(alpha_heatmap,            0.7,            "Blending factor (range 0-1) between heatmap and original frame. 1 will only show the"
                                                         " heatmap, 0 will only show the frame. Only valid for GPU rendering.");
 
+vector <float> iouList;
+int totalHits = 0;
+
 class Frame{
 public:
 	vector<cv::Rect> GTboundingBoxes; //ground truth bounding boxes
@@ -89,6 +92,49 @@ float iou(cv::Rect a, cv::Rect b){
 	if (u.width * u.height != 0)
 		return ((float)intersection.width * (float)intersection.height) / ((float)u.width * (float)u.height);
 	return 0;
+}
+
+//compute intersection over union of two bounding boxes
+int hits(cv::Rect prediction, cv::Rect bb){
+	return
+			prediction.x + prediction.width / 2 > bb.x &&
+			prediction.x + prediction.width / 2 < bb.x + bb.width &&
+			prediction.y + prediction.height / 2 > bb.y &&
+			prediction.y + prediction.height / 2 < bb.y + bb.height;
+}
+
+vector <Frame> frames;
+
+void precisionAndRecall (){
+
+	float tp = 0;
+	float fp = 0;
+	float gt = 0;
+	float pred = 0;
+
+	for (int i = 0; i < iouList.size(); i++)
+		if (iouList[i] != 0.0)
+			tp++;
+		else
+			fp++;
+
+	for (int i = 0; i < frames.size(); i++){
+		gt += frames[i].GTboundingBoxes.size();
+		pred += frames[i].PredictionBoundingBoxes.size();
+	}
+
+	float fn = gt - pred;
+
+	cout << "True Positive: " << tp << endl;
+	cout << "False Positive: " << fp << endl;
+	cout << "False Negative: " << fn << endl;
+	cout << "GT: " << gt << endl;
+	cout << "predict: " << pred << endl;
+
+	cout << "Sensibility: " << tp / (tp + fn) << endl;
+	cout << "Precision: " << tp / (tp + fp) << endl;
+	cout << "F-measure: " << 2*tp / (2*tp + fp + fn) << endl;
+
 }
 
 vector<Frame> loadGroundTruth(){
@@ -118,6 +164,8 @@ vector<Frame> loadGroundTruth(){
 	in.close();
 	return frames;
 };
+
+
 
 void drawRect(cv::Mat frame, cv::Rect rect, cv::Scalar color){
 
@@ -177,7 +225,7 @@ int openPoseTutorialPose2()
     // Step 1 - Read and load image, error if empty (possibly wrong path)
     // Alternative: cv::imread(FLAGS_image_path, CV_LOAD_IMAGE_COLOR);
 
-
+    frames = loadGroundTruth();
     cv::VideoCapture cap("output.mp4"); // open the default camera
 	if(!cap.isOpened())  // check if we succeeded
 		return -1;
@@ -186,8 +234,6 @@ int openPoseTutorialPose2()
 	printf("Video Frame Rate: %f\n", fps);
 
 	int frameNumber = 0;
-	vector <Frame> frames = loadGroundTruth();
-	vector <float> iouList;
 
 	for(;;)
 	{
@@ -241,15 +287,13 @@ int openPoseTutorialPose2()
 
 				//compute intersection over union and append on list
 				iouList.push_back(iou(predictedBoundingBox, frames[frameNumber].GTboundingBoxes[i]));
+				totalHits += hits(predictedBoundingBox, frames[frameNumber].GTboundingBoxes[i]);
 
 				//draw ground truth boundingbox
 				drawRect(inputImage, frames[frameNumber].GTboundingBoxes[i], cv::Scalar(255,0,0));
 			}
 
-
-
 			frames[frameNumber].appendPredictionBoundingBox(predictedBoundingBox);
-
 			cv::imshow("OpenPose", inputImage);
 		}
 
@@ -264,15 +308,24 @@ int openPoseTutorialPose2()
 
 	cout << "The average of iou is : " << average << endl;
 	cout << "The standardDeviation of iou is : " << standardDeviation << endl;
+	cout << "The hits is : " << totalHits << endl;
+	precisionAndRecall();
 
     return 0;
 }
 
 int main(int argc, char *argv[])
 {
+	
+	if (argc < 2){
+		cout << "Usage: build/examples/user_code/openpose-iara.bin <VIDEO_PATH>" << endl;
+		exit(0);
+	}
+	
     // Parsing command line flags
     gflags::ParseCommandLineFlags(&argc, &argv, true);
 
     // Running openPoseTutorialPose2
     return openPoseTutorialPose2();
 }
+
