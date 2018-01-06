@@ -69,34 +69,34 @@ Durante os experimentos, foram desenvolvidos dois programas visando:
  
 Para executa-los, siga os passos a seguir:
 
-1. Clone o repositório
+- Clone o repositório
 ```sh
 git clone https://github.com/LCAD-UFES/Deep-Learning-2017-2
 ```
-2. Navegue até o diretório do projeto
+- Navegue até o diretório do projeto
 ```sh
 cd Deep-Learning-2017-2/emilia-daniel
 ```
-3. Copie os arquivos `openpose-iara.cpp` e `video-annotation.cpp` para o diretório raiz do repositório do Openpose (que você baixo anteriormente)
+- Copie os arquivos `openpose-iara.cpp` e `video-annotation.cpp` para o diretório raiz do repositório do Openpose (que você baixo anteriormente)
 ```sh
 cp video-annotation.cpp <PATH_REPOSITORIO_OPENPOSE>
 cp openpose-iara.cpp <PATH_REPOSITORIO_OPENPOSE>
 ```
-4. Compilação
-  4.1 Anotação de bounding box:
+- Compilação
+  - Anotação de bounding box:
   ```sh
   g++ -o video-annotation video-annotation.cpp -W -Wall `pkg-config --cflags opencv` -O4 `pkg-config --libs opencv`
   ```
-  4.1 Detecção de pessoas:
+  - Detecção de pessoas:
   ```sh
   make
   ```
-5. Execução  
-  5.1 Anotação de bounding box:
+- Execução  
+  - Anotação de bounding box (o arquivo groundtruth.txt será criado no mesmo diretório):
   ```sh
   ./video-anotation <VIDEO_PATH> #replace <VIDEO_PATH> for the video path
   ```
-  5.1 Detecção de pessoas:
+  - Detecção de pessoas:
   ```sh
   build/examples/user_code/1.bin
   ```
