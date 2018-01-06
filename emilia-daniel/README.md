@@ -11,7 +11,7 @@
   - [Sistemas operacionais homologados](#sistemas-operacionais-homologados)
   - [Configuração mínima recomendada de hardware e software](#Configuração-mínima-recomendada-de-hardware-e-software)
 - [Instalação](#instalacao)
-- [Execução do experimento](#execucao-do-experimento)
+- [Experimento](#experimento)
 - [Resultado](#resultado)
 
 # Openpose
