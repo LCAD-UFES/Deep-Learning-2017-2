@@ -80,7 +80,7 @@ cd Deep-Learning-2017-2/emilia-daniel
 - Copie os arquivos `openpose-iara.cpp` e `video-annotation.cpp` para o diretório raiz do repositório do Openpose (que você baixo anteriormente)
 ```sh
 cp video-annotation.cpp <PATH_REPOSITORIO_OPENPOSE>
-cp openpose-iara.cpp <PATH_REPOSITORIO_OPENPOSE>
+cp openpose-iara.cpp <PATH_REPOSITORIO_OPENPOSE>/examples/user_code #espaço recomendado para codigos dos usuarios
 ```
 - Compilação
   - Anotação de bounding box:
@@ -92,11 +92,11 @@ cp openpose-iara.cpp <PATH_REPOSITORIO_OPENPOSE>
   make
   ```
 - Execução  
-  - Anotação de bounding box (o arquivo groundtruth.txt será criado no mesmo diretório):
+  - Anotação de bounding box (o arquivo groundtruth.txt será criado no diretório raiz):
   ```sh
   ./video-anotation <VIDEO_PATH> #replace <VIDEO_PATH> for the video path
   ```
-  - Detecção de pessoas:
+  - Detecção de pessoas (o arquivo groundtruth.txt deve estar no diretório raiz)::
   ```sh
-  build/examples/user_code/1.bin
+  build/examples/user_code/openpose-iara.bin <VIDEO_PATH> #replace <VIDEO_PATH> for the video path
   ```
