@@ -8,7 +8,7 @@
 
 - [Openpose](#openpose)
 - [Pré Requisitos](#pre-requisitos)
-- [Instalação do OpenPose por Script](#instalacao-do-openpose-por-script)
+  - [Sistemas operacionais homologados](#Sistemas operacionais homologados)
 - [Instalação do OpenPose manualmente](#instalacao-do-openpose-manualmente)
   - [Selecionar o Makefile (execute apenas um dos próximos 4 comandos)](#selecionar-o-makefile-execute-apenas-um-dos-proximos-4-comandos)
   - [Compilar o Caffe](#compilar-o-caffe)
@@ -100,3 +100,4 @@ cp openpose-iara.cpp <PATH_REPOSITORIO_OPENPOSE>/examples/user_code #espaço rec
   ```sh
   build/examples/user_code/openpose-iara.bin <VIDEO_PATH> #replace <VIDEO_PATH> for the video path
   ```
+Caso execute diretamente na máquina **car02** do LCAD, já existe um exemplo de arquivo de log do iara (output.mp4) no diretório raiz do nosso projeto `/media/raid0/Datasets/Emilia-daniel/openpose/` e as marcações dos ground truth feitas pela ferramenta **video-annotation** são encontradas no arquivo `groundtruth.txt`. Para o experimento, foram feitas 516 marcações de pessoas.
