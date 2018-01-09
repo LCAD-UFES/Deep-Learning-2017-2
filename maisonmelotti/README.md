@@ -10,6 +10,19 @@ MAIN RESOURCES
 
 * The original [paper](https://arxiv.org/pdf/1406.2661.pdf) written by Ian Goodfellow in 2014. 
 
+In this work we use a DCGAN based architecture (DUAL-GAN) as the main tool, since the original paper is from 2014, new architectures show good results. 
+[Deep Convolutional Generative Adversarial Networks](http://arxiv.org/abs/1511.06434) DCGAN PAPER
+
+
+# DCGAN in Tensorflow
+
+Tensorflow implementation of DCGAN which is a stabilize Generative Adversarial Networks. The referenced torch code can be found [here](https://github.com/soumith/dcgan.torch).
+
+![alt tag](DCGAN.png)
+
+* [Brandon Amos](http://bamos.github.io/) wrote an excellent [blog post](http://bamos.github.io/2016/08/09/deep-completion/) and [image completion code](https://github.com/bamos/dcgan-completion.tensorflow) based on this repo.
+* *To avoid the fast convergence of D (discriminator) network, G (generator) network is updated twice for each D network update, which differs from original paper.*
+
 # DualGAN Paper -->
 
  # ICCV paper of DualGAN
