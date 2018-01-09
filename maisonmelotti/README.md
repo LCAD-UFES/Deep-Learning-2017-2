@@ -10,8 +10,7 @@ MAIN RESOURCES
 
 * The original [paper](https://arxiv.org/pdf/1406.2661.pdf) written by Ian Goodfellow in 2014. 
 
-In this work we use a DCGAN based architecture (DUAL-GAN) as the main tool, since the original paper is from 2014, new architectures show good results. 
-[Deep Convolutional Generative Adversarial Networks](http://arxiv.org/abs/1511.06434) DCGAN PAPER
+In this work we use a DCGAN based architecture (DUAL-GAN) as the main tool, since the original paper is from 2014, new architectures show good results. See DCGAN PAPER [Deep Convolutional Generative Adversarial Networks](http://arxiv.org/abs/1511.06434) 
 
 
 # DCGAN in Tensorflow
