@@ -1,4 +1,4 @@
-DEEP LEARNING - 2017 2
+DEEP LEARNING - 2017 2, Maison M.
 
 GAN - Generative Adversarial Network
 Maison Melotti
@@ -7,7 +7,7 @@ MAIN RESOURCES
 
 GAN ORIGINAL PAPER -->
 
-DualGAN Paper -->
+# DualGAN Paper -->
 
  # ICCV paper of DualGAN
 <a href="https://arxiv.org/abs/1704.02510">DualGAN: unsupervised dual learning for image-to-image translation</a>
@@ -84,6 +84,7 @@ python main.py --phase test --dataset_name facades --image_size 256 --epoch 45 -
 # datasets
 
 some datasets can also be downloaded manually from the website. Please cite their papers if you use the data. 
+Using maps dataset requires add maps on "datasets.sh" file! Not all datasets are default!
 
 facades: http://cmp.felk.cvut.cz/~tylecr1/facade/
 
@@ -105,6 +106,3 @@ day-night: http://www.cs.mun.ca/~yz7241/dataset/
 ![sk2ph](https://github.com/duxingren14/DualGAN/blob/master/sk2ph.png)
 ![ph2sk](https://github.com/duxingren14/DualGAN/blob/master/ph2sk.png)
 
-# Acknowledgments
-
-Codes are built on the top of pix2pix-tensorflow and DCGAN-tensorflow. Thanks for their precedent contributions!
