@@ -1,11 +1,14 @@
-DEEP LEARNING - 2017 2, Maison M.
+# DEEP LEARNING - 2017 2, Maison M.
 
 GAN - Generative Adversarial Network
 Maison Melotti
 
 MAIN RESOURCES
 
-GAN ORIGINAL PAPER -->
+
+# GAN (ORIGINAL) PAPER -->
+
+* The original [paper](https://arxiv.org/pdf/1406.2661.pdf) written by Ian Goodfellow in 2014. 
 
 # DualGAN Paper -->
 
@@ -106,3 +109,18 @@ day-night: http://www.cs.mun.ca/~yz7241/dataset/
 ![sk2ph](https://github.com/duxingren14/DualGAN/blob/master/sk2ph.png)
 ![ph2sk](https://github.com/duxingren14/DualGAN/blob/master/ph2sk.png)
 
+
+# Experimental results LCAD-UFES--> IARA data:
+
+Here the
+
+
+
+# More GAN Resources
+
+* The original [paper](https://arxiv.org/pdf/1406.2661.pdf) written by Ian Goodfellow in 2014. 
+* Siraj Raval's [video tutorial](https://www.youtube.com/watch?v=deyOX6Mt_As) on GANs (Really fun video)
+* Ian Godfellow's [keynote](https://channel9.msdn.com/Events/Neural-Information-Processing-Systems-Conference/Neural-Information-Processing-Systems-Conference-NIPS-2016/Generative-Adversarial-Networks) on GANs (More of a technical video)
+* Brandon Amos's image completion [blog post](https://bamos.github.io/2016/08/09/deep-completion/)
+* [Blog post](https://medium.com/@ageitgey/abusing-generative-adversarial-networks-to-make-8-bit-pixel-art-e45d9b96cee7) on using GANs in video games. 
+* Andrej Karpathy's [blog post](http://cs.stanford.edu/people/karpathy/gan/) with GAN visualizations.
