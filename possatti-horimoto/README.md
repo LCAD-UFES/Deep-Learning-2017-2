@@ -11,19 +11,20 @@ Spatial Transformer Networks
 
 ## Introdução
 
-Neste trabalho, nós fizemos alguns testes com *Spatial Transformer Networks* em versões deformadas do MNIST e CIFAR-10, utilizando o framework [Keras][keras]. O código para os experimentos, bem como o relatório, podem ser encontrados em [github.com/possatti/mestrado-dl-stn][mestrado-dl-stn]. Este documento foca na execução dos experimentos. Para mais informação sobre STNs, nossa metodologia e resultados, por favor leia o relatório e também o [paper da STN][stn-paper].
+Neste trabalho, nós fizemos alguns testes com *Spatial Transformer Networks* em versões deformadas do MNIST e CIFAR-10, utilizando o framework [Keras][keras]. O código para os experimentos, bem como o relatório, podem ser encontrados em [github.com/possatti/mestrado-dl-stn][mestrado-dl-stn]. Este documento foca na execução dos experimentos. Para mais informação sobre STNs, nossa metodologia e resultados, por favor leia o [relatório][relatorio] e também o [paper da STN][stn-paper].
 
 <!-- TODO: Colocar link para o relatório. -->
 
 [keras]: https://keras.io/
 [stn-paper]: https://arxiv.org/abs/1506.02025
 [mestrado-dl-stn]: https://github.com/possatti/mestrado-dl-stn
+[relatorio]: https://github.com/possatti/mestrado-dl-stn/blob/master/relatorio/main.pdf
 
 ## Spatial Transformer Networks
 
 *Spatial Transformer Networks* são redes neurais que incluem uma ou mais camadas de *Spatial Transformers*. O *Spatial Transformer* é um módulo que aplica uma transformação espacial no *feature map* de entrada (e.g. uma transformação afim). Ele é composto por três partes: rede de localização, *grid generator*, e *sampler*. Nós utilizamos uma implementação que nos permite se preocupar apenas com a rede de localização.
 
-<!-- TODO: Colocar alguma figura bonitinha da STN. -->
+![stn-examples](stn-examples.png "STN Examples")
 
 ## Experimentos
 
@@ -35,9 +36,13 @@ Nós treinamos dois tipos de modelo em cada um desses datasets: *Baseline* e STN
 
 [CIFAR-10]: https://www.cs.toronto.edu/~kriz/cifar.html
 
-O *cluttered MNIST* foi construído ao aplicar translações e adicionar artefatos (*clutter*) aleatoriamente nas imagens originais do MNIST. E criamos o CIFAR-10-DISTORTED através do seguinte processo para cada imagem: expandimos o canvas original de 32x32 para 64x64, mantendo a imagem original centralizada no canvas (ainda em 32x32) e preenchendo com preto ao redor; aplicamos uma rotação aleatória no range de [-20, +20] graus; aplicamos translações verticais e horizontais aleatórias no range de [-10, +10] píxeis; e, adicionalmente, espelhamos horizontalmente (apenas com dados de treino).
+O *cluttered MNIST* foi construído ao aplicar translações e adicionar artefatos (*clutter*) aleatoriamente nas imagens originais do MNIST. Veja alguns exemplos de imagens do *Cluttered MNIST*:
 
-<!-- TODO: Colocar exemplos de imagens de cada dataset. -->
+![cluttered-mnist-samples](CM-samples.png "Exemplo de imagens do Cluttered MNIST")
+
+E criamos o CIFAR-10-DISTORTED através do seguinte processo para cada imagem: expandimos o canvas original de 32x32 para 64x64, mantendo a imagem original centralizada no canvas (ainda em 32x32) e preenchendo com preto ao redor; aplicamos uma rotação aleatória no range de [-20, +20] graus; aplicamos translações verticais e horizontais aleatórias no range de [-10, +10] píxeis; e, adicionalmente, espelhamos horizontalmente (apenas com dados de treino). Veja exemplos de imagens do CIFAR-10-DISTORTED:
+
+![cifar-10-distorted-samples](C10D-samples.png "Exemplo de imagens do CIFAR-10-DISTORTED")
 
 ### Requisitos
 
