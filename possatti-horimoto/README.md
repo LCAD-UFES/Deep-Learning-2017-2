@@ -22,7 +22,7 @@ Neste trabalho, nós fizemos alguns testes com *Spatial Transformer Networks* em
 
 ## Spatial Transformer Networks
 
-*Spatial Transformer Networks* são redes neurais que incluem uma ou mais camadas de *Spatial Transformers*. O *Spatial Transformer* é um módulo que aplica uma transformação espacial no *feature map* de entrada (e.g. uma transformação afim). Ele é composto por três partes: rede de localização, *grid generator*, e *sampler*. Nós utilizamos uma implementação que nos permite se preocupar apenas com a rede de localização.
+O *Spatial Transformer* é um módulo que aplica uma transformação espacial no *feature map* de entrada (e.g. uma transformação afim). Ele é composto por três partes: rede de localização, *grid generator*, e *sampler*. Nós utilizamos uma implementação que nos permite se preocupar apenas com a rede de localização.
 
 ![stn-examples](stn-examples.png "STN Examples")
 
