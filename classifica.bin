@@ -1,0 +1,1 @@
+ ./classification.bin deploy.prototxt bvlc_alexnet.caffemodel imagenet_mean.binaryproto synset_words.txt $1
