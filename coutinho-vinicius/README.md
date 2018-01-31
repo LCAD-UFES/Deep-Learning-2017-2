@@ -54,7 +54,9 @@ Após instalar as dependencias:
 
 A pasta `examples` contem algumas amostras dos dados da IARA. 
 As imagens foram gravadas das cameras stereo ZED posicionada no parabrisas da IARA e uma Bumblebee posicionada no teto da IARA
+
 * Bumblebee Fernando Ferrari dataset
+
 <img src="examples/bumblebee_ff/image_0000_1487599152.311320.png" width="288"> <img src="examples/bumblebee_ff/image_0492_1487599249.131558.png" width="288"> <img src="examples/bumblebee_ff/image_1513_1487599726.952565.png" width="288">
 
 <img src="examples/bumblebee_ff/threshold-0001/0000_green.png" width="288"> <img src="examples/bumblebee_ff/threshold-0001/0492_green.png" width="288"> <img src="examples/bumblebee_ff/threshold-0001/1513_green.png" width="288"> 
