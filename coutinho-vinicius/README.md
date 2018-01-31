@@ -14,9 +14,32 @@ alcançando a 1ª colocação na [Kitti Dataset](http://www.cvlibs.net/datasets/
 Esta ferramenta foi então testada e avaliada nos dados da IARA, o [Relatorio](link) descreve essa avalição e resultados obitidos.
 
 ### Dependencias
-
+    
+    [Tensorflow 1.0]()
+    python 2.7
+    python libraries:
+       * matplotlib
+       * numpy
+       * Pillow
+       * scipy
+       * commentjson
+    Essas bibliotecas podem ser instaladas via: `pip install numpy scipy pillow matplotlib commentjson`
+     ou `pip install -r requirements.txt`. (arquivo dentro do diretorio KittiSeg)
 
 ### Configuracao
+    
+Após instalar as dependencias:
+
+   1. Clone esse repositório: 
+        `git clone https://github.com/vinibc/KittiSeg.git`
+   2. Inicialize todos os submodulos:
+        `git submodule update --init --recursive`
+   3. [Optional] Download Datasets:
+        1. Kitti Road Data:
+            * Retrieve kitti data url here: http://www.cvlibs.net/download.php?file=data_road.zip
+            * Call python download_data.py --kitti_url URL_YOU_RETRIEVED
+        2. Imagens IARA (não anotadas)
+            * link dropbox
 
 
 ### Rodando a ferramenta
@@ -30,6 +53,10 @@ Esta ferramenta foi então testada e avaliada nos dados da IARA, o [Relatorio](l
 ### Resultados
 
 A pasta `examples` contem algumas amostras dos dados da IARA. 
-As imagens foram gravadas das cameras stereo ZED posicionada na  e Bumblebee placed in the windshield of the car.
+As imagens foram gravadas das cameras stereo ZED posicionada no parabrisas da IARA e uma Bumblebee posicionada no teto da IARA
+* Bumblebee Fernando Ferrari dataset
+<img src="examples/bumblebee_ff/image_0000_1487599152.311320.png" width="288"> <img src="examples/bumblebee_ff/image_0492_1487599249.131558.png" width="288"> <img src="examples/bumblebee_ff/image_1513_1487599726.952565.png" width="288">
+
+<img src="examples/bumblebee_ff/threshold-0001/0000_green.png" width="288"> <img src="examples/bumblebee_ff/threshold-0001/0492_green.png" width="288"> <img src="examples/bumblebee_ff/threshold-0001/1513_green.png" width="288"> 
 
 Results from the complete recording which the samples were extracted are presented in [this]() video.
