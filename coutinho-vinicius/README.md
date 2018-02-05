@@ -20,7 +20,7 @@ O [Relatorio](link) descreve essa avalição e resultados obitidos.
 
 ### Dependencias
     
-    [Tensorflow 1.0](https://www.tensorflow.org/install/)
+   * [Tensorflow 1.0](https://www.tensorflow.org/install)
         (Neste trabalho foi utilizado o modo de instalacao com suporte a CUDA e Virtualenv)
     python 2.7
     python libraries:
@@ -62,7 +62,9 @@ Após instalar as dependencias:
     python demo_modified.py --input_image /caminho/list_images.txt --output_image pasta_de_saida/ --gpus 0
 ```
 o comando -- gpu para escolher qual GPU sera utilizada
+
 o nome das imagens serao os mesmos das originais concatenados com _green.png (imagem com overlayer dado treshold) e _raw.png (imagem de todas as inferencias inclusive abaixo do treshold)
+
 A rede usa 11.74GB da GPU, porem uma vez que o modelo subiu para placa, a inferencia e rapida (cerca de 0.140s)
 
 
@@ -94,7 +96,7 @@ Os melhores resultados obitidos foram usando o treshold 0.001.
 
 * KITTI Dataset
 
-<img src="examples/kitti/um_road_000032.png" width="288"> <img src="data/examples/uu_road_000002.png" width="288"> <img src="data/examples/uu_road_000049.png" width="288"> 
+<img src="examples/kitti/um_road_000032.png" width="288"> <img src="examples/kitti/uu_road_000002.png" width="288"> <img src="examples/kitti/uu_road_000049.png" width="288"> 
 
 O video completo dos resultados obtidos podem ser visualizados nestes videos:
  [ZED Fernando Ferrari]()
