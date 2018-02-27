@@ -100,8 +100,8 @@ Os melhores resultados obitidos foram usando o treshold 0.001.
 
 O video completo dos resultados obtidos podem ser visualizados nestes videos:
  [ZED Fernando Ferrari](https://youtu.be/_xiEXOvRT4Q)
- [Bumblebee Fernando Ferrari](https://youtu.be/zjF5GQnOzig)
- [Bumbleblee Volta da UFES]()
+ [Bumblebee Fernando Ferrari](https://youtu.be/cOlB6dKSw-g)
+ [Bumbleblee Volta da UFES](https://youtu.be/nlM3osCNvXc)
  [Comparacao melhores ZEDxBumblebee Fernando Ferrari](https://youtu.be/zjF5GQnOzig)
 
 Descricao detalhada dos experimentos pode ser vista no [Relatorio](https://drive.google.com/file/d/1W-kV1VB2NK78tNX8J5Lv8gPIKV5R0s0-/view?usp=sharing).
