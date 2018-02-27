@@ -16,7 +16,7 @@ e provou que seu desempenho na segmentação de pista era o estado da arte
 
 Para a realização dos experimentos utilizamos imagens extraídas de logs gerados pela IARA (Intelligent Autonomous Robotic Automobile),
  o carro autônomo desenvolvido pelo Laboratório de Computação de Alto Desempenho (LCAD) da UFES.
-O [Relatorio](link) descreve essa avalição e resultados obitidos.
+O [Relatorio](https://drive.google.com/file/d/1W-kV1VB2NK78tNX8J5Lv8gPIKV5R0s0-/view?usp=sharing) descreve essa avalição e resultados obitidos.
 
 ### Dependencias
     
@@ -99,12 +99,12 @@ Os melhores resultados obitidos foram usando o treshold 0.001.
 <img src="examples/kitti/um_road_000032.png" width="288"> <img src="examples/kitti/uu_road_000002.png" width="288"> <img src="examples/kitti/uu_road_000049.png" width="288"> 
 
 O video completo dos resultados obtidos podem ser visualizados nestes videos:
- [ZED Fernando Ferrari]()
- [Bumblebee Fernando Ferrari]()
+ [ZED Fernando Ferrari](https://youtu.be/_xiEXOvRT4Q)
+ [Bumblebee Fernando Ferrari](https://youtu.be/zjF5GQnOzig)
  [Bumbleblee Volta da UFES]()
- [Comparacao melhores ZEDxBumblebee Fernando Ferrari]()
+ [Comparacao melhores ZEDxBumblebee Fernando Ferrari](https://youtu.be/zjF5GQnOzig)
 
-Descricao detalhada dos experimentos pode ser vista no [Relatorio](link).
+Descricao detalhada dos experimentos pode ser vista no [Relatorio](https://drive.google.com/file/d/1W-kV1VB2NK78tNX8J5Lv8gPIKV5R0s0-/view?usp=sharing).
 
 
 Referencia:
