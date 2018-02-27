@@ -16,7 +16,7 @@ e provou que seu desempenho na segmentação de pista era o estado da arte
 
 Para a realização dos experimentos utilizamos imagens extraídas de logs gerados pela IARA (Intelligent Autonomous Robotic Automobile),
  o carro autônomo desenvolvido pelo Laboratório de Computação de Alto Desempenho (LCAD) da UFES.
-O [Relatorio](https://drive.google.com/file/d/1W-kV1VB2NK78tNX8J5Lv8gPIKV5R0s0-/view?usp=sharing) descreve essa avalição e resultados obitidos.
+O [Relatorio] descreve essa avalição e resultados obitidos.
 
 ### Dependencias
     
@@ -104,7 +104,7 @@ O video completo dos resultados obtidos podem ser visualizados nestes videos:
  [Bumbleblee Volta da UFES](https://youtu.be/nlM3osCNvXc)
  [Comparacao melhores ZEDxBumblebee Fernando Ferrari](https://youtu.be/zjF5GQnOzig)
 
-Descricao detalhada dos experimentos pode ser vista no [Relatorio](https://drive.google.com/file/d/1W-kV1VB2NK78tNX8J5Lv8gPIKV5R0s0-/view?usp=sharing).
+Descricao detalhada dos experimentos pode ser vista no [Relatorio].
 
 
 Referencia:
@@ -112,3 +112,5 @@ Referencia:
 Teichmann, Marvin, Michael Weber, Marius Zoellner, Roberto Cipolla, and Raquel Urtasun,
  "Multinet: Real-time joint semantic reasoning for autonomous driving," arXiv preprint arXiv:1612.07695, 2016.
 ```
+
+[Relatorio]: <https://github.com/LCAD-UFES/Deep-Learning-2017-2/blob/master/coutinho-vinicius/Relatorio.pdf>
