@@ -84,7 +84,7 @@ Os melhores resultados obitidos foram usando o treshold 0.001.
 
 * ZED Fernando Ferrari dataset (treshold de deteccao 0.001)
 
-<img src="examples/bumblebee_ff/threshold-0001/0000_green.png" width="288"> <img src="examples/bumblebee_ff/threshold-0001/0492_green.png" width="288"> <img src="examples/bumblebee_ff/threshold-0001/1513_green.png" width="288"> 
+<img src="examples/zed/117_green.png" width="288"> <img src="examples/zed/378_green.png" width="288"> <img src="examples/zed/486_green.png" width="288">
 
 * Bumblebee Fernando Ferrari dataset (treshold de deteccao 0.001)
 
@@ -92,7 +92,7 @@ Os melhores resultados obitidos foram usando o treshold 0.001.
 
 * Bumblebee Volta da UFES dataset (treshold de deteccao 0.001)
 
-<img src="examples/bumblebee_ff/threshold-0001/0000_green.png" width="288"> <img src="examples/bumblebee_ff/threshold-0001/0492_green.png" width="288"> <img src="examples/bumblebee_ff/threshold-0001/1513_green.png" width="288"> 
+<img src="examples/voltaufes/1620_green.png" width="288"> <img src="examples/voltaufes/2870_green.png" width="288"> <img src="examples/voltaufes/3540_green.png" width="288">
 
 * KITTI Dataset
 
